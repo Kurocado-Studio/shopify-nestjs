@@ -1,0 +1,19 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./vitest.config.ts",
+    "./setup.react.ts"
+  ],
+  "extends": "@kurocado-studio/style-guide/tsconfig/node",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "paths": { "~/*": ["./src/*"] },
+    "rootDir": "."
+  },
+  "exclude": ["node_modules"]
+}
