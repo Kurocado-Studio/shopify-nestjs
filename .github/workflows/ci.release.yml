@@ -1,0 +1,25 @@
+name: Release
+
+permissions:
+  pull-requests: write
+  contents: write
+  pages: write
+  id-token: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    uses: kurocado-studio/styleguide/.github/workflows/lint.yml@main
+    secrets: inherit
+
+  release:
+    uses: kurocado-studio/styleguide/.github/workflows/release.yml@main
+    secrets: inherit
+
+  documentation:
+    uses: kurocado-studio/styleguide/.github/workflows/writerside-documentation.yml@main
+    secrets: inherit

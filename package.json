@@ -1,0 +1,28 @@
+{
+  "name": "@kurocado-studio/shopify-nestjs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "author": "@kurocado-studio",
+  "license": "MIT",
+  "scripts": {
+    "build": "echo \"no build needed\" && exit 0",
+    "commitlint": "pnpm exec commitlint --edit",
+    "eslint-check": "eslint --max-warnings=0 .",
+    "prepare": "husky install",
+    "prettier-check": "prettier --check .",
+    "prettier-fix": "prettier --check . --write",
+    "semantic-release": "semantic-release",
+    "test": "echo \"no test specified\" && exit 0"
+  },
+  "lint-staged": {
+    "*": "prettier -w --ignore-unknown",
+    "src/**/*.{ts,tsx}": ["npm run prettier-fix", "npm run eslint-check"]
+  },
+  "devDependencies": {
+    "@kurocado-studio/style-guide": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

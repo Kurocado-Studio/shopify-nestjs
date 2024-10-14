@@ -1,0 +1,9 @@
+name: Lint
+
+on:
+  pull_request:
+
+jobs:
+  code-quality:
+    uses: kurocado-studio/styleguide/.github/workflows/lint.yml@main
+    secrets: inherit
